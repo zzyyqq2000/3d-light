@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Wed Sep 16 14:09:33 2020
+# Process ID: 12104
+# Current directory: D:/xilinx/uart/uart.runs/impl_1
+# Command line: vivado.exe -log uart.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source uart.tcl -notrace
+# Log file: D:/xilinx/uart/uart.runs/impl_1/uart.vdi
+# Journal file: D:/xilinx/uart/uart.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source uart.tcl -notrace

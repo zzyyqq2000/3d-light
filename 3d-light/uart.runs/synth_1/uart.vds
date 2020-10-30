@@ -1,0 +1,457 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Oct 19 22:05:28 2020
+# Process ID: 18808
+# Current directory: D:/xilinx/3d_light/uart.runs/synth_1
+# Command line: vivado.exe -log uart.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart.tcl
+# Log file: D:/xilinx/3d_light/uart.runs/synth_1/uart.vds
+# Journal file: D:/xilinx/3d_light/uart.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source uart.tcl -notrace
+Command: synth_design -top uart -part xc7a35tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-csg324'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-csg324'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18320 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 309.496 ; gain = 80.875
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'uart' [D:/xilinx/3d_light/uart.srcs/sources_1/new/uart.v:23]
+INFO: [Synth 8-638] synthesizing module 'clk_div' [D:/xilinx/3d_light/uart.srcs/sources_1/new/clk_div.v:23]
+	Parameter period bound to: 32'b00000000000000000000000000101000 
+INFO: [Synth 8-256] done synthesizing module 'clk_div' (1#1) [D:/xilinx/3d_light/uart.srcs/sources_1/new/clk_div.v:23]
+INFO: [Synth 8-638] synthesizing module 'btn_detect' [D:/xilinx/3d_light/uart.srcs/sources_1/new/btn_detect.v:23]
+	Parameter clk_sys_freq bound to: 100000000 - type: integer 
+	Parameter delay bound to: 2 - type: integer 
+	Parameter cnt_max bound to: 199999 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'btn_detect' (2#1) [D:/xilinx/3d_light/uart.srcs/sources_1/new/btn_detect.v:23]
+INFO: [Synth 8-638] synthesizing module 'baudrate' [D:/xilinx/3d_light/uart.srcs/sources_1/new/baudrate.v:23]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter baudrate bound to: 76800 - type: integer 
+	Parameter contmax bound to: 1301 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'baudrate' (3#1) [D:/xilinx/3d_light/uart.srcs/sources_1/new/baudrate.v:23]
+INFO: [Synth 8-638] synthesizing module 'receive_data' [D:/xilinx/3d_light/uart.srcs/sources_1/new/receive_data.v:23]
+	Parameter receive bound to: 1 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/xilinx/3d_light/uart.srcs/sources_1/new/receive_data.v:44]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/xilinx/3d_light/uart.srcs/sources_1/new/receive_data.v:87]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/xilinx/3d_light/uart.srcs/sources_1/new/receive_data.v:66]
+INFO: [Synth 8-256] done synthesizing module 'receive_data' (4#1) [D:/xilinx/3d_light/uart.srcs/sources_1/new/receive_data.v:23]
+WARNING: [Synth 8-567] referenced signal 'rec_data' should be on the sensitivity list [D:/xilinx/3d_light/uart.srcs/sources_1/new/uart.v:72]
+WARNING: [Synth 8-3848] Net PC_Uart_txd in module/entity uart does not have driver. [D:/xilinx/3d_light/uart.srcs/sources_1/new/uart.v:28]
+WARNING: [Synth 8-3848] Net seg_cs in module/entity uart does not have driver. [D:/xilinx/3d_light/uart.srcs/sources_1/new/uart.v:29]
+WARNING: [Synth 8-3848] Net seg_data_0_pin in module/entity uart does not have driver. [D:/xilinx/3d_light/uart.srcs/sources_1/new/uart.v:30]
+WARNING: [Synth 8-3848] Net seg_data_1_pin in module/entity uart does not have driver. [D:/xilinx/3d_light/uart.srcs/sources_1/new/uart.v:30]
+INFO: [Synth 8-256] done synthesizing module 'uart' (5#1) [D:/xilinx/3d_light/uart.srcs/sources_1/new/uart.v:23]
+WARNING: [Synth 8-3917] design uart has port exp_io_n driven by constant 0
+WARNING: [Synth 8-3331] design uart has unconnected port PC_Uart_txd
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[7]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[6]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[5]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[4]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[3]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[2]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[1]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[0]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[6]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[5]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[4]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[3]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[2]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[1]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[0]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[6]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[5]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[4]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[3]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[2]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[1]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[0]
+WARNING: [Synth 8-3331] design uart has unconnected port btn_pin
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 348.828 ; gain = 120.207
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 348.828 ; gain = 120.207
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/xilinx/3d_light/EGo1.xdc]
+Finished Parsing XDC File [D:/xilinx/3d_light/EGo1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/xilinx/3d_light/EGo1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/uart_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/uart_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 643.664 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/xilinx/3d_light/uart.srcs/sources_1/new/clk_div.v:33]
+INFO: [Synth 8-5546] ROM "data" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/xilinx/3d_light/uart.srcs/sources_1/new/receive_data.v:59]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   9 Input      1 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 2     
+	  12 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	  12 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module uart 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module clk_div 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module btn_detect 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module baudrate 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+Module receive_data 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   9 Input      1 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	  12 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element c0/clk_out_reg was removed.  [D:/xilinx/3d_light/uart.srcs/sources_1/new/clk_div.v:38]
+WARNING: [Synth 8-6014] Unused sequential element BTN_detect/btn_out_reg was removed.  [D:/xilinx/3d_light/uart.srcs/sources_1/new/btn_detect.v:40]
+WARNING: [Synth 8-6014] Unused sequential element Rec_data/parity_error_reg was removed.  [D:/xilinx/3d_light/uart.srcs/sources_1/new/receive_data.v:73]
+WARNING: [Synth 8-6014] Unused sequential element Rec_data/frame_error_reg was removed.  [D:/xilinx/3d_light/uart.srcs/sources_1/new/receive_data.v:72]
+WARNING: [Synth 8-6014] Unused sequential element c0/cnt_reg was removed.  [D:/xilinx/3d_light/uart.srcs/sources_1/new/clk_div.v:33]
+INFO: [Synth 8-5546] ROM "Rec_data/data" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element Rec_data/cnt_reg was removed.  [D:/xilinx/3d_light/uart.srcs/sources_1/new/receive_data.v:59]
+WARNING: [Synth 8-3917] design uart has port exp_io_n driven by constant 0
+WARNING: [Synth 8-3331] design uart has unconnected port PC_Uart_txd
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[7]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[6]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[5]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[4]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[3]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[2]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[1]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_cs[0]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[6]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[5]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[4]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[3]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[2]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[1]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_0_pin[0]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[6]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[5]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[4]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[3]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[2]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[1]
+WARNING: [Synth 8-3331] design uart has unconnected port seg_data_1_pin[0]
+WARNING: [Synth 8-3331] design uart has unconnected port btn_pin
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[32]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[31]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[30]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[29]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[28]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[27]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[26]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[25]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[24]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[23]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[22]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[21]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[20]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[19]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'BTN_detect/cnt_reg[18]' (FDC) to 'Baudrate/cont_reg[20]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[20]' (FDC) to 'Baudrate/cont_reg[31]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[21]' (FDC) to 'Baudrate/cont_reg[31]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[19]' (FDC) to 'Baudrate/cont_reg[31]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[17]' (FDC) to 'Baudrate/cont_reg[31]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[18]' (FDC) to 'Baudrate/cont_reg[31]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[11]' (FDC) to 'Baudrate/cont_reg[31]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[12]' (FDC) to 'Baudrate/cont_reg[31]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[13]' (FDC) to 'Baudrate/cont_reg[31]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[14]' (FDC) to 'Baudrate/cont_reg[31]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[15]' (FDC) to 'Baudrate/cont_reg[31]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[16]' (FDC) to 'Baudrate/cont_reg[31]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[31]' (FDC) to 'Baudrate/cont_reg[30]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[30]' (FDC) to 'Baudrate/cont_reg[29]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[29]' (FDC) to 'Baudrate/cont_reg[28]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[27]' (FDC) to 'Baudrate/cont_reg[28]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[28]' (FDC) to 'Baudrate/cont_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[22]' (FDC) to 'Baudrate/cont_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[23]' (FDC) to 'Baudrate/cont_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[24]' (FDC) to 'Baudrate/cont_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Baudrate/cont_reg[25]' (FDC) to 'Baudrate/cont_reg[26]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Baudrate/cont_reg[26] )
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/BTN_buf_reg) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[17]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[16]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[15]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[14]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[13]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[12]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[11]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[10]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[9]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[8]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[7]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[6]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[5]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[4]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[3]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[2]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[1]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/cnt_reg[0]) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (BTN_detect/btn_pre_reg) is unused and will be removed from module uart.
+WARNING: [Synth 8-3332] Sequential element (Baudrate/cont_reg[26]) is unused and will be removed from module uart.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |     3|
+|3     |LUT2  |     5|
+|4     |LUT3  |     8|
+|5     |LUT4  |     8|
+|6     |LUT5  |     8|
+|7     |LUT6  |    15|
+|8     |FDCE  |    21|
+|9     |FDRE  |    18|
+|10    |IBUF  |     3|
+|11    |OBUF  |    10|
+|12    |OBUFT |    23|
++------+------+------+
+
+Report Instance Areas: 
++------+-----------+-------------+------+
+|      |Instance   |Module       |Cells |
++------+-----------+-------------+------+
+|1     |top        |             |   123|
+|2     |  Baudrate |baudrate     |    31|
+|3     |  Rec_data |receive_data |    47|
++------+-----------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 643.664 ; gain = 415.043
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 54 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 643.664 ; gain = 120.207
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 643.664 ; gain = 415.043
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+61 Infos, 85 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 643.664 ; gain = 421.168
+INFO: [Common 17-1381] The checkpoint 'D:/xilinx/3d_light/uart.runs/synth_1/uart.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 643.664 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 19 22:06:09 2020...
